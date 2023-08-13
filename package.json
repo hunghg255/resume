@@ -4,7 +4,8 @@
   "packageManager": "pnpm@7.8.0",
   "scripts": {
     "dev": "concurrently \"npx grunt watch\" \"node ./serve.js ./resume.json\"",
-    "build": "grunt less && node ./build.js"
+    "build-dist": "grunt less && node ./build.js",
+    "build": "echo \"Please use 'build-dist' instead of 'build'\""
   },
   "dependencies": {
     "gravatar": "^1.8.2",
