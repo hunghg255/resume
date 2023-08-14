@@ -206,6 +206,11 @@ async function render(resume) {
       project.stars = await getRepoStars(project.githubUrl)
   }
 
+  for (const project of resume.osp){
+    if (project.githubUrl)
+      project.stars = await getRepoStars(project.githubUrl)
+  }
+
   Handlebars.registerHelper('toSocialIcon', function (text) {
     return {
       linkedin: 'ri:linkedin-box-fill',

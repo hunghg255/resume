@@ -139,13 +139,87 @@
               <p> {{breaklines resume.basics.summary}} </p>
             </div>
 
-            <div id="work-projects-group">
+            {{!-- <div id="work-projects-group"> --}}
+              <div id="work-experience">
+                <h4> <span class="title">Work Experience</span> </h4>
+                <ul class="list-unstyled">
+                  {{#each resume.work}}
+                    <li class="card-nested relax">
+                      <div class="content has-sidebar">
+                        <p class="clear-margin-sm">
+                          <strong>{{#if website}}<a href="{{website}}" target="_blank">{{company}}</a>{{else}}{{company}}{{/if}}</strong>
+                          <span class="text-muted" style="margin-left: 0.3em">{{position}}</span>
+                        </p>
+                        <p class="text-muted">
+                          <small>
+                            <span class="space-right"> {{startDate}} - {{#if endDate}}{{endDate}}{{else}}Present{{/if}} | {{location}}</span>
+                          </small>
+                        </p>
+                        <p>{{summary}}</p>
+                        {{#if highlights}}
+                          <ul class='highlight'>
+                            {{#each highlights}}
+                              <li> {{.}} </li>
+                            {{/each}}
+                          </ul>
+                        {{/if}}
+                      </div>
+
+                    </li>
+                  {{/each}}
+                </ul>
+              </div>
+
               {{#if resume.projects}}
-              <div id="projects">
+              <div id="projects" class="company-projects">
                 <h4><span class="title">Projects</span></h4>
                 <div class="list-unstyled projects">
                   <div class="project-table">
                   {{#each resume.projects}}
+                    <li class="card-nested {{domClasses}}">
+                      <div class="content has-sidebar">
+                        <p class="clear-margin-sm" itemprop="award">
+                          <strong>{{displayName}}</strong>&nbsp
+                          {{#if githubUrl}}
+                            <a href="{{githubUrl}}" class='icon' target="_blank">
+                              <span class="iconify" data-icon="{{toSocialIcon 'github'}}"></span>
+                            </a>
+                          {{/if}}
+                          {{#if website}}
+                            <a href="{{website}}" class='icon' target="_blank">
+                              <span class="iconify" data-icon="{{toSocialIcon 'link'}}"></span>
+                            </a>
+                          {{/if}}
+                        </p>
+                        <p class="text-muted">
+                          <small> {{summary}} </small>
+                        </p>
+                        {{#if githubUrl}}
+                          <p class="github-stars">
+                            <span class="iconify" data-icon="ri:star-fill"></span>
+                            <span class="stars" data-gh-api="{{getGithubApi githubUrl}}">{{stars}}</span>
+                          </p>
+                        {{/if}}
+                      </div>
+                    </li>
+                  {{/each}}
+                  </div>
+                  {{!-- {{#if resume.basics.projects_url}}
+                    <li class="card-nested text-muted">
+                      <a href="{{resume.basics.projects_url}}" target="_blank">More Projects...</a>
+                    </li>
+                  {{/if}} --}}
+                  <div class='px10'></div>
+                </div>
+              </div>
+              {{/if}}
+
+              {{#if resume.osp}}
+              <div id="projects">
+                <h4><span class="title">Open Source Projects</span></h4>
+                <div class="list-unstyled projects">
+                  <div class="project-table">
+                  {{#each resume.osp}}
                     <li class="card-nested {{domClasses}}">
                       <div class="content has-sidebar">
                         <p class="clear-margin-sm" itemprop="award">
@@ -184,36 +258,8 @@
               </div>
               {{/if}}
 
-              <div id="work-experience">
-                <h4> <span class="title">Work Experience</span> </h4>
-                <ul class="list-unstyled">
-                  {{#each resume.work}}
-                    <li class="card-nested relax">
-                      <div class="content has-sidebar">
-                        <p class="clear-margin-sm">
-                          <strong>{{#if website}}<a href="{{website}}" target="_blank">{{company}}</a>{{else}}{{company}}{{/if}}</strong>
-                          <span class="text-muted" style="margin-left: 0.3em">{{position}}</span>
-                        </p>
-                        <p class="text-muted">
-                          <small>
-                            <span class="space-right"> {{startDate}} - {{#if endDate}}{{endDate}}{{else}}Present{{/if}} | {{location}}</span>
-                          </small>
-                        </p>
-                        <p>{{summary}}</p>
-                        {{#if highlights}}
-                          <ul class='highlight'>
-                            {{#each highlights}}
-                              <li> {{.}} </li>
-                            {{/each}}
-                          </ul>
-                        {{/if}}
-                      </div>
 
-                    </li>
-                  {{/each}}
-                </ul>
-              </div>
-            </div>
+            {{!-- </div> --}}
 
             <h4 id="skills"><span class="title">Stacks</span> </h4>
             <div class="card-nested" itemprop="description">

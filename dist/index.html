@@ -10,7 +10,7 @@
     <meta property='og:site_name' content="Hoang Gia Hung - Résumé" />
     <meta property='og:type' content='website' />
 
-    <link rel='shortcut icon' href='/favicon.ico' />
+    <link rel='shortcut icon' href='./favicon.ico' />
 
     <meta name='title' content="Hoang Gia Hung - Résumé" />
     <meta
@@ -379,10 +379,12 @@ a:focus {
   .background-card h4:not(:first-child) {
     margin-top: 1em;
   }
-  #work-projects-group {
+  .project-table {
     display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: 2fr 4fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem 1rem;
+  }
+  .company-projects {
     page-break-after: always;
   }
 }
@@ -454,8 +456,50 @@ a:focus {
               <p> Hi, my name is Hung, i&#x27;m 26 years old. I got a bachelor of Electronics Telecommunication Engineering at Ha Noi University of Science and Technology. Besides, i am really passionate about Javascript and Web Development.<br><br>I am also an open-source enthusiast and maintainer. I love how collaboration and knowledge sharing happens through open-source and I am happy to see what I do could eventually feedback to the community and industry. </p>
             </div>
 
-            <div id="work-projects-group">
-              <div id="projects">
+              <div id="work-experience">
+                <h4> <span class="title">Work Experience</span> </h4>
+                <ul class="list-unstyled">
+                    <li class="card-nested relax">
+                      <div class="content has-sidebar">
+                        <p class="clear-margin-sm">
+                          <strong><a href="https://agiletech.vn/" target="_blank">AgileTech Vietnam</a></strong>
+                          <span class="text-muted" style="margin-left: 0.3em">Frontend Developer</span>
+                        </p>
+                        <p class="text-muted">
+                          <small>
+                            <span class="space-right"> Dec 2020 - Present | Nhân Hòa, quận Thanh Xuân, Hà Nội</span>
+                          </small>
+                        </p>
+                        <p></p>
+                          <ul class='highlight'>
+                              <li> Worked on developing and maintaining the projects of the company. </li>
+                              <li> Training new members of the company. </li>
+                          </ul>
+                      </div>
+
+                    </li>
+                    <li class="card-nested relax">
+                      <div class="content has-sidebar">
+                        <p class="clear-margin-sm">
+                          <strong><a href="https://beau.vn/vi" target="_blank">Beau Agency Vietnam</a></strong>
+                          <span class="text-muted" style="margin-left: 0.3em">Frontend Developer Intern</span>
+                        </p>
+                        <p class="text-muted">
+                          <small>
+                            <span class="space-right"> Dec 2019 - Dec 2020 | Hoàng Văn Thái, Thanh Xuân, Hà Nội</span>
+                          </small>
+                        </p>
+                        <p>Worked on developing and maintaining the company&#x27;s e-commerce, landing page website</p>
+                          <ul class='highlight'>
+                              <li> Developed and maintained the project on shopify platform. </li>
+                          </ul>
+                      </div>
+
+                    </li>
+                </ul>
+              </div>
+
+              <div id="projects" class="company-projects">
                 <h4><span class="title">Projects</span></h4>
                 <div class="list-unstyled projects">
                   <div class="project-table">
@@ -501,7 +545,7 @@ a:focus {
                     <li class="card-nested ">
                       <div class="content has-sidebar">
                         <p class="clear-margin-sm" itemprop="award">
-                          <strong>Gourmetmarket Thailand</strong>&nbsp
+                          <strong>Gourmet Market Thailand</strong>&nbsp
                             <a href="https://gourmetmarketthailand.com/th/" class='icon' target="_blank">
                               <span class="iconify" data-icon="ri:arrow-right-up-line"></span>
                             </a>
@@ -538,6 +582,135 @@ a:focus {
                       </div>
                     </li>
                   </div>
+                  <div class='px10'></div>
+                </div>
+              </div>
+
+              <div id="projects">
+                <h4><span class="title">Open Source Projects</span></h4>
+                <div class="list-unstyled projects">
+                  <div class="project-table">
+                    <li class="card-nested ">
+                      <div class="content has-sidebar">
+                        <p class="clear-margin-sm" itemprop="award">
+                          <strong>Svg To Font</strong>&nbsp
+                            <a href="https://github.com/hunghg255/svg-to-font" class='icon' target="_blank">
+                              <span class="iconify" data-icon="ri:github-fill"></span>
+                            </a>
+                            <a href="https://svg-to-font.vercel.app/" class='icon' target="_blank">
+                              <span class="iconify" data-icon="ri:arrow-right-up-line"></span>
+                            </a>
+                        </p>
+                        <p class="text-muted">
+                          <small> Convert svg to font </small>
+                        </p>
+                          <p class="github-stars">
+                            <span class="iconify" data-icon="ri:star-fill"></span>
+                            <span class="stars" data-gh-api="https://api.github.com/repos/hunghg255/svg-to-font">2</span>
+                          </p>
+                      </div>
+                    </li>
+                    <li class="card-nested ">
+                      <div class="content has-sidebar">
+                        <p class="clear-margin-sm" itemprop="award">
+                          <strong>CSS To Tailwindcss</strong>&nbsp
+                            <a href="https://github.com/hunghg255/css2tailwind" class='icon' target="_blank">
+                              <span class="iconify" data-icon="ri:github-fill"></span>
+                            </a>
+                            <a href="https://css2tailwind-docs.vercel.app/" class='icon' target="_blank">
+                              <span class="iconify" data-icon="ri:arrow-right-up-line"></span>
+                            </a>
+                        </p>
+                        <p class="text-muted">
+                          <small> Convert css to tailwindcss </small>
+                        </p>
+                          <p class="github-stars">
+                            <span class="iconify" data-icon="ri:star-fill"></span>
+                            <span class="stars" data-gh-api="https://api.github.com/repos/hunghg255/css2tailwind">4</span>
+                          </p>
+                      </div>
+                    </li>
+                    <li class="card-nested ">
+                      <div class="content has-sidebar">
+                        <p class="clear-margin-sm" itemprop="award">
+                          <strong>Quilljs Resize Image</strong>&nbsp
+                            <a href="https://github.com/hunghg255/quill-resize-image" class='icon' target="_blank">
+                              <span class="iconify" data-icon="ri:github-fill"></span>
+                            </a>
+                            <a href="https://quill-resize-image.vercel.app/" class='icon' target="_blank">
+                              <span class="iconify" data-icon="ri:arrow-right-up-line"></span>
+                            </a>
+                        </p>
+                        <p class="text-muted">
+                          <small> A module resize image for quilljs </small>
+                        </p>
+                          <p class="github-stars">
+                            <span class="iconify" data-icon="ri:star-fill"></span>
+                            <span class="stars" data-gh-api="https://api.github.com/repos/hunghg255/quill-resize-image">4</span>
+                          </p>
+                      </div>
+                    </li>
+                    <li class="card-nested ">
+                      <div class="content has-sidebar">
+                        <p class="clear-margin-sm" itemprop="award">
+                          <strong>CSV Parser</strong>&nbsp
+                            <a href="https://github.com/hunghg255/csvs-parsers" class='icon' target="_blank">
+                              <span class="iconify" data-icon="ri:github-fill"></span>
+                            </a>
+                            <a href="https://github.com/hunghg255/csvs-parsers" class='icon' target="_blank">
+                              <span class="iconify" data-icon="ri:arrow-right-up-line"></span>
+                            </a>
+                        </p>
+                        <p class="text-muted">
+                          <small> A module parse csv file for nodejs </small>
+                        </p>
+                          <p class="github-stars">
+                            <span class="iconify" data-icon="ri:star-fill"></span>
+                            <span class="stars" data-gh-api="https://api.github.com/repos/hunghg255/csvs-parsers">4</span>
+                          </p>
+                      </div>
+                    </li>
+                    <li class="card-nested ">
+                      <div class="content has-sidebar">
+                        <p class="clear-margin-sm" itemprop="award">
+                          <strong>React Sticky</strong>&nbsp
+                            <a href="https://github.com/hunghg255/reactjs-s4y" class='icon' target="_blank">
+                              <span class="iconify" data-icon="ri:github-fill"></span>
+                            </a>
+                            <a href="https://react-sticky.vercel.app/" class='icon' target="_blank">
+                              <span class="iconify" data-icon="ri:arrow-right-up-line"></span>
+                            </a>
+                        </p>
+                        <p class="text-muted">
+                          <small> A library sticky element for reactjs </small>
+                        </p>
+                          <p class="github-stars">
+                            <span class="iconify" data-icon="ri:star-fill"></span>
+                            <span class="stars" data-gh-api="https://api.github.com/repos/hunghg255/reactjs-s4y">6</span>
+                          </p>
+                      </div>
+                    </li>
+                    <li class="card-nested ">
+                      <div class="content has-sidebar">
+                        <p class="clear-margin-sm" itemprop="award">
+                          <strong>React OTP Input</strong>&nbsp
+                            <a href="https://github.com/hunghg255/reactjs-otp-input" class='icon' target="_blank">
+                              <span class="iconify" data-icon="ri:github-fill"></span>
+                            </a>
+                            <a href="https://reactjs-otp-input.vercel.app/" class='icon' target="_blank">
+                              <span class="iconify" data-icon="ri:arrow-right-up-line"></span>
+                            </a>
+                        </p>
+                        <p class="text-muted">
+                          <small> A library otp input for reactjs </small>
+                        </p>
+                          <p class="github-stars">
+                            <span class="iconify" data-icon="ri:star-fill"></span>
+                            <span class="stars" data-gh-api="https://api.github.com/repos/hunghg255/reactjs-otp-input">6</span>
+                          </p>
+                      </div>
+                    </li>
+                  </div>
                     <li class="card-nested text-muted">
                       <a href="https://hung.thedev.id/projects" target="_blank">More Projects...</a>
                     </li>
@@ -545,49 +718,7 @@ a:focus {
                 </div>
               </div>
 
-              <div id="work-experience">
-                <h4> <span class="title">Work Experience</span> </h4>
-                <ul class="list-unstyled">
-                    <li class="card-nested relax">
-                      <div class="content has-sidebar">
-                        <p class="clear-margin-sm">
-                          <strong><a href="https://agiletech.vn/" target="_blank">AgileTech Vietnam</a></strong>
-                          <span class="text-muted" style="margin-left: 0.3em">Frontend Developer</span>
-                        </p>
-                        <p class="text-muted">
-                          <small>
-                            <span class="space-right"> Dec 2020 - Present | Nhân Hòa, quận Thanh Xuân, Hà Nội</span>
-                          </small>
-                        </p>
-                        <p></p>
-                          <ul class='highlight'>
-                              <li> Worked on developing and maintaining the projects of the company. </li>
-                              <li> Training new members of the company. </li>
-                          </ul>
-                      </div>
 
-                    </li>
-                    <li class="card-nested relax">
-                      <div class="content has-sidebar">
-                        <p class="clear-margin-sm">
-                          <strong><a href="https://beau.vn/vi" target="_blank">Beau Agency Vietnam</a></strong>
-                          <span class="text-muted" style="margin-left: 0.3em">Frontend Developer Intern</span>
-                        </p>
-                        <p class="text-muted">
-                          <small>
-                            <span class="space-right"> Dec 2019 - Dec 2020 | Hoàng Văn Thái, Thanh Xuân, Hà Nội</span>
-                          </small>
-                        </p>
-                        <p>Worked on developing and maintaining the company&#x27;s e-commerce, landing page website</p>
-                          <ul class='highlight'>
-                              <li> Developed and maintained the project on shopify platform. </li>
-                          </ul>
-                      </div>
-
-                    </li>
-                </ul>
-              </div>
-            </div>
 
             <h4 id="skills"><span class="title">Stacks</span> </h4>
             <div class="card-nested" itemprop="description">
@@ -615,13 +746,13 @@ a:focus {
                       </p>
                       <p class="text-muted clear-margin-sm">
                         <small>
-                          Sep 2015 -  Sep 2020 
+                          Sep 2015 -  Sep 2020
                         </small>
                       </p>
                       <div></div>
                       <i></i>
                       <div class="space-top labels">
-                        
+
                       </div>
                     </div>
                   </li>
@@ -651,7 +782,7 @@ a:focus {
                   Online Version
                 </a>
               </div>
-              <div style="opacity:0.7; font-size:1.2rem;margin-top:1rem;">Last updated at August 13th 2023, 8:24:19 pm</div>
+              <div style="opacity:0.7; font-size:1.2rem;margin-top:1rem;">Last updated at August 14th 2023, 2:44:29 pm</div>
             </div>
           </div>
         </div>
