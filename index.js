@@ -60,7 +60,8 @@ function getUrlFromUsername(site, username) {
     dribbble: 'dribbble.com',
     facebook: 'facebook.com',
     angellist: 'angel.co',
-    bitbucket: 'bitbucket.org'
+    bitbucket: 'bitbucket.org',
+    tiktok: 'tiktok.com'
   };
 
   site = site.toLowerCase();
@@ -219,7 +220,8 @@ async function render(resume) {
       twitter: 'ri:twitter-fill',
       website: 'ri:global-line',
       link: 'ri:arrow-right-up-line',
-      portfolio: 'ri:account-circle-fill'
+      portfolio: 'ri:account-circle-fill',
+      tiktok: 'ri:tiktok-fill'
     }[text.trim().toLowerCase()]
   })
 
