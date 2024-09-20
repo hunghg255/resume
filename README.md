@@ -1,6 +1,6 @@
 # Résumé d'hunghg255
 
-This is my Résumé generator. You can check out my Résumé [here](https://hunghg-resume.vercel.app/).
+This is my Résumé generator. You can check out my Résumé [here](https://resume.hunghg.me/).
 
 The theme is heavy modified from [jsonresume-theme-kwan](https://github.com/icoloma/jsonresume-theme-kwan).
 
