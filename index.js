@@ -221,7 +221,10 @@ async function render(resume) {
       website: 'ri:global-line',
       link: 'ri:arrow-right-up-line',
       portfolio: 'ri:account-circle-fill',
-      tiktok: 'ri:tiktok-fill'
+      tiktok: 'ri:tiktok-fill',
+      npm: 'ri:npmjs-fill',
+      facebook: 'ri:facebook-box-fill',
+      profile: 'ri:profile-line',
     }[text.trim().toLowerCase()]
   })
 
